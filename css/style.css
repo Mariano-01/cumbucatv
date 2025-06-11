@@ -1,0 +1,31 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.container{
+    width: auto;
+    height: 100px;
+    background-color: #FFF6AE;
+}
+#logo{
+    margin-left: 8px;
+    width: 89px;
+    height: 90px;
+    box-shadow: 1px 1px 1px;
+}
+
+.barra-de-pesquisa{
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #afafaf;
+    border-radius: 4px;
+    box-sizing: border-box;
+    float: center;
+    margin-left: 600px;
+    margin-right: auto;
+}
+
+#lupa{
+    width: 38px;
+    height: 38px;
+}
