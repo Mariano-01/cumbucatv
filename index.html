@@ -1,21 +1,105 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I AM THE STORM THAT IS APROOOOACHING, PROVOOOOOOOKING BLACK CLOUDS IN ISOLATIOON, I AM RECLAIMER OF MY NAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAME, BORN IN FLAMES, I HAVE REGRET, LIVIN IN A PEST CAUSE</title>
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CumbucaTV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header>
-        <div class="container">  
-            <img src="./img/cumbucapirilampotransparente.png" alt="pirilampo em riba de uma cumbuca" id="logo">
-            <input class="barra-de-pesquisa" type="text">Pesquisar...</input>
-            <img src="./img/search.png" alt="" id="lupa">
-        </div>
-        <div>
-            
-        </div>
-    </header>
+  <div class="navbar">
+    <div class="logo" onclick="toggleSidebar()">
+      <img src="./img/cumbucapirilampotransparente.png" alt="logo" />
+    </div>
+    <div class="search">
+      <input type="text" placeholder="Pesquisar..." />
+    </div>
+    <img class="notification" src="" alt="sino" />
+  </div>
+
+  <div class="overlay" onclick="toggleSidebar()"></div>
+
+  <div class="sidebar" id="sidebar">
+    <nav>
+      <a href="#">🏠 Início</a>
+      <a href="#">🧭 Explorar</a>
+      <a href="#">🕓 Histórico</a>
+      <a href="#">🔖 Salvos</a>
+      <a href="#">📃 Playlist</a>
+      <a href="#">📺 Transmissões</a>
+      <a href="#">🎵 Músicas</a>
+      <a href="#">🎬 Filmes</a>
+    </nav>
+  </div>
+
+  <div class="content">
+    <!-- Card marromeno -->
+    <div class="card">
+      <img src="./img/cellbirt vs barata.jpg" alt="video" />
+      <div class="info">
+        <strong>Título do Vídeo</strong><br />
+        <span>@Usuário</span>
+      </div>
+    </div>
+        <div class="card">
+      <img src="./img/DAnçadaTortura.jpg" alt="video" />
+      <div class="info">
+        <strong>Título do Vídeo</strong><br />
+        <span>@Usuário</span>
+      </div>
+    </div>
+        <div class="card">
+      <img src="./img/EUsouOMINECRAFT.jpg" alt="video" />
+      <div class="info">
+        <strong>Título do Vídeo</strong><br />
+        <span>@Usuário</span>
+      </div>
+    </div>
+        <div class="card">
+      <img src="./img/ImStevenoFNF.jpg" alt="video" />
+      <div class="info">
+        <strong>Título do Vídeo</strong><br />
+        <span>@Usuário</span>
+      </div>
+    </div>
+        <div class="card">
+      <img src="./img/JamesSutherland.jpg" alt="video" />
+      <div class="info">
+        <strong>Título do Vídeo</strong><br />
+        <span>@Usuário</span>
+      </div>
+    </div>
+        <div class="card">
+      <img src="./img/JOJOFAg.jpg" alt="video" />
+      <div class="info">
+        <strong>Título do Vídeo</strong><br />
+        <span>@Usuário</span>
+      </div>
+    </div>
+        <div class="card">
+      <img src="./img/lol.jpg" alt="video" />
+      <div class="info">
+        <strong>Título do Vídeo</strong><br />
+        <span>@Usuário</span>
+      </div>
+    </div>
+        <div class="card">
+      <img src="./img/omacacodeheliofilho.jpg" alt="video" />
+      <div class="info">
+        <strong>Título do Vídeo</strong><br />
+        <span>@Usuário</span>
+      </div>
+    </div>
+        <div class="card">
+      <img src="./img/minhapomba.jpg" alt="video" />
+      <div class="info">
+        <strong></strong><br />
+        <span>@Usuário</span>
+      </div>
+    </div>
+    <!-- Daqui pra baixo é so repetir a -->
+  </div>
+<script src="./js/script.js"></script>
 </body>
 </html>
