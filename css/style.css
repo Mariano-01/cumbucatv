@@ -26,21 +26,22 @@
       height: 40px;
     }
     .search {
-      flex: 1;
       margin: 0 20px;
-      display: flex;
-      align-items: center;
+      margin-left: 680px;
       background: white;
       border-radius: 20px;
-      padding: 5px 10px;
+      padding: 7px 20px;
+      width: 200%;
     }
     .search input {
       border: none;
       outline: none;
       width: 100%;
       font-size: 16px;
+      font-weight: bold;
     }
     .notification {
+      margin-left: 700px;
       height: 24px;
     }
     .content {
