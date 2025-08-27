@@ -1,0 +1,286 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.5;
+}
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  background-color: #f8e97f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.logo img {
+  height: 36px;
+}
+
+.logo span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.search {
+  flex: 1;
+  max-width: 500px;
+  margin: 0 40px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  font-size: 14px;
+  color: #333;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.notification {
+  height: 22px;
+  cursor: pointer;
+}
+
+.upload-btn {
+  background: #f5c518;
+  border: none;
+  color: #333;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.upload-btn:hover {
+  background: #ffd83d;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100vh;
+  background-color: #fff7a3; 
+  border-right: 1px solid #ccc;
+  padding-top: 70px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 11;
+}
+
+.sidebar.active {
+  transform: translateX(0);
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 20px;
+}
+
+.sidebar nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  padding: 8px 0;
+  transition: 0.2s;
+}
+
+.sidebar nav a:hover {
+  color: #000;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  display: none;
+  z-index: 9;
+}
+
+.overlay.active {
+  display: block;
+}
+
+.content {
+  margin-top: 20px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.card .info {
+  padding: 12px;
+}
+
+.card .info strong {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.card .info span {
+  font-size: 13px;
+  color: #666;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 800px;
+  width: 90%;
+}
+
+.modal video {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+.upload-box {
+  display: none;
+  background: white;
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 600px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.upload-box.active {
+  display: block;
+}
+
+.upload-box h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #333;
+}
+
+.upload-box input[type="file"],
+.upload-box input[type="text"] {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.upload-box button {
+  width: 100%;
+  padding: 10px;
+  background: #f5c518;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.upload-box button:hover {
+  background: #ffd83d;
+}
+
+
+@media (max-width: 768px) {
+  .search {
+    display: none; 
+  }
+  .navbar {
+    justify-content: space-between;
+  }
+  .sidebar {
+    width: 200px;
+  }
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;    
+  padding: 20px;    
+}

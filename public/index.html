@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CumbucaTV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="navbar">
+    <div class="logo">
+      <img src="./img/cumbucapirilampotransparente.png" alt="logo" />
+      <span>CumbucaTV</span>
+    </div>
+
+    <div class="search">
+      <input type="text" placeholder="Pesquisar vídeos..." />
+    </div>
+
+    <div class="user-actions">
+      <button class="icon-btn">
+
+        <svg viewBox="0 0 24 24"><path d="M12 24c1.3 0 2.4-1 2.5-2.3h-5C9.6 23 10.7 24 12 24zM18.3 16V11c0-3-1.6-5.4-4.5-6V4c0-.8-.7-1.5-1.5-1.5S11 3.2 11 4v1c-2.9.6-4.5 3-4.5 6v5L5 18v1h14v-1l-2.7-2z"/></svg>
+      </button>
+      <button class="upload-btn" onclick="toggleUpload()">⬆ Upload</button>
+      <button class="icon-btn">
+
+        <svg viewBox="0 0 24 24"><path d="M12 12c2.7 0 4.9-2.2 4.9-4.9S14.7 2.2 12 2.2 7.1 4.4 7.1 7.1 9.3 12 12 12zm0 2c-3.3 0-9.8 1.7-9.8 5v2.7h19.6V19c0-3.3-6.5-5-9.8-5z"/></svg>
+      </button>
+    </div>
+  </header>
+<div class="main-container">
+
+  <main class="content" id="videoGrid">
+
+  </main>
+
+  <div id="videoModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fecharVideo()">&times;</span>
+      <video id="videoPlayer" controls></video>
+      <h3 id="videoTitle"></h3>
+      <p id="videoAuthor"></p>
+    </div>
+  </div>
+
+  <section class="upload-box" id="uploadBox">
+    <h2>Enviar novo vídeo</h2>
+    <input type="file" id="videoUpload" accept="video/*">
+    <input type="text" id="videoTitleInput" placeholder="Título do vídeo">
+    <input type="text" id="videoAuthorInput" placeholder="Autor">
+    <button onclick="uploadVideo()">Upload</button>
+  </section>
+</div>
+  <script src="./script.js"></script>
+</body>
+</html>
