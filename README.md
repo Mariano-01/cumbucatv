@@ -1,12 +1,12 @@
 # cumbucatv
-nota mental: adicionar 3 pontinhos do lado do card
-compartilhar (copiar link, whatsapp)
-excluir
-salvar/adicionar a playlist
-baixar vídeo
-denunciar
-
-adicionar a descrição
-adicionar busca no canal
-filtro
-pesquisa
+nota mental: adicionar 3 pontinhos do lado do card <br>
+compartilhar (copiar link, whatsapp)<br>
+excluir<br>
+salvar/adicionar a playlist<br>
+baixar vídeo<br>
+denunciar<br>
+<br>
+adicionar a descrição<br>
+adicionar busca no canal<br>
+filtro<br>
+pesquisa<br>
