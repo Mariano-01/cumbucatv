@@ -157,44 +157,65 @@ body {
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
+  max-height: 500px; /* Limite para altura */
 }
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card video {
+  width: 100%;
+  height: 180px; /* Definir uma altura fixa */
+  object-fit: cover; /* Assegura que a imagem/vídeo seja cortado se necessário, mantendo a proporção */
 }
 
 .card img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
-  display: block;
+  height: 180px; /* Ajuste a altura de imagens */
+  object-fit: cover; /* Mantém a proporção da imagem, cortando-a quando necessário */
 }
 
 .card .info {
   padding: 12px;
+  height: 100px; /* Limite de altura */
+  overflow: hidden; /* Evita que o texto ultrapasse */
+  text-overflow: ellipsis; /* Caso o texto seja muito longo, aparece "..." */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card .info strong {
   display: block;
   font-size: 15px;
   margin-bottom: 4px;
+  white-space: nowrap; /* Impede que o título quebre em várias linhas */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card .info span {
   font-size: 13px;
   color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; /* Impede que o texto quebre */
 }
 
 .modal {
-  display: none;
+  display: none; /* Começa oculto */
   position: fixed;
   top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.7);
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
   justify-content: center;
   align-items: center;
   z-index: 20;
+  flex-direction: column;
+  overflow: auto; /* Isso evita que o conteúdo ultrapasse a tela */
 }
 
 .modal-content {
@@ -202,7 +223,9 @@ body {
   padding: 20px;
   border-radius: 8px;
   max-width: 800px;
-  width: 90%;
+  width: 90%; /* 90% da largura da tela */
+  max-height: 80vh; /* Define a altura máxima para evitar esticar o modal */
+  overflow-y: auto; /* Se o conteúdo for maior que o espaço disponível, cria uma rolagem */
 }
 
 .modal video {
@@ -217,6 +240,7 @@ body {
   cursor: pointer;
   color: #333;
 }
+
 
 .upload-box {
   display: none;
@@ -267,17 +291,13 @@ body {
 }
 
 
-@media (max-width: 768px) {
-  .search {
-    display: none; 
-  }
-  .navbar {
-    justify-content: space-between;
-  }
-  .sidebar {
-    width: 200px;
+@media (max-width: 480px) {
+  .modal-content {
+    width: 95%;
+    max-width: 95%;
   }
 }
+
 
 .main-container {
   max-width: 1200px;
