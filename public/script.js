@@ -89,7 +89,9 @@ function addVideoCard(url, title, author) {
         <span>${author}</span>
       </div>
     </div>
-    <button class="delete-btn" onclick="deletarVideo(this)">🗑️</button>
+    <button class="delete-btn" onclick="deletarVideo(this)">
+      <img src="https://www.svgrepo.com/show/380116/trash-delete-bin.svg" class="lixeira">
+    </button>
   `;
 
   content.prepend(card);

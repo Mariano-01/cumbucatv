@@ -1,0 +1,5 @@
+def maior_numero(a, b):
+    return a if a > b else b
+
+# Exemplo de uso
+print(maior_numero(5, 10))  # Saída: 10
